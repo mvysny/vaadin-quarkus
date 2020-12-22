@@ -1,8 +1,14 @@
 # Vaadin+Quarkus example project
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+This project runs [Vaadin 14](https://vaadin.com/) on top of Quarkus: https://quarkus.io/ .
+The JBoss Undertow Servlet container is used to run Vaadin Servlet.
 
-If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
+THIS IS A WORK IN PROGRESS - there are a couple of rough edges here and there. After
+you check out the project, you need to do the following before
+you attempt to run this project:
+
+1. Edit the `MyServlet.java` class and change
+   the `PROJECT_BASEDIR` configuration option to the correct path to this example project.
 
 ## Running the application in dev mode
 
@@ -27,7 +33,7 @@ If you want to build an _über-jar_, execute the following command:
 
 The application is now runnable using `java -jar target/code-with-quarkus-1.0.0-SNAPSHOT-runner.jar`.
 
-## Creating a native executable
+## Creating a native executable (unsupported at the moment)
 
 You can create a native executable using: 
 ```shell script
@@ -42,9 +48,3 @@ Or, if you don't have GraalVM installed, you can run the native executable build
 You can then execute your native executable with: `./target/code-with-quarkus-1.0.0-SNAPSHOT-runner`
 
 If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.html.
-
-# RESTEasy JAX-RS
-
-<p>A Hello World RESTEasy resource</p>
-
-Guide: https://quarkus.io/guides/rest-json
