@@ -4,15 +4,16 @@
          http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
     <servlet>
-        <servlet-name>comingsoon</servlet-name>
+        <servlet-name>vaadin</servlet-name>
         <servlet-class>com.vaadin.flow.server.VaadinServlet</servlet-class>
+        <!-- workaround for https://github.com/mvysny/vaadin-quarkus/issues/2 -->
         <init-param>
             <param-name>project.basedir</param-name>
             <param-value>/home/mavi/work/inacta/vaadin-quarkus</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>
-        <servlet-name>comingsoon</servlet-name>
+        <servlet-name>vaadin</servlet-name>
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
 </web-app>

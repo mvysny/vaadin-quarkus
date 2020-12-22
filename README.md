@@ -7,8 +7,8 @@ THIS IS A WORK IN PROGRESS - there are a couple of rough edges here and there. A
 you check out the project, you need to do the following before
 you attempt to run this project:
 
-1. Edit the `MyServlet.java` class and change
-   the `PROJECT_BASEDIR` configuration option to the correct path to this example project.
+1. Edit the `web.xml` file and change
+   the `project.basedir` configuration option to the correct path to this example project. See Issue #2 for more details.
 
 ## Running the application in dev mode
 
