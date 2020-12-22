@@ -9,6 +9,7 @@ you attempt to run this project:
 
 1. Edit the `web.xml` file and change
    the `project.basedir` configuration option to the correct path to this example project. See issue #2 for more details.
+   (note that this is not needed for Vaadin 19+Quarkus, see the v19 branch for more details).
 
 ## Running the application in dev mode
 
