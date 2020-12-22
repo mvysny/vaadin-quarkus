@@ -187,7 +187,7 @@ public class DevModeInitializer
 
     private boolean isVaadinServletSubClass(String className)
             throws ClassNotFoundException {
-        // @TODO mavi modification: use Thread.currentThread().getContextClassLoader() .
+        // @TODO mavi https://github.com/mvysny/vaadin-quarkus/issues/1
         return VaadinServlet.class.isAssignableFrom(Class.forName(className, true, Thread.currentThread().getContextClassLoader()));
     }
 
