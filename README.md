@@ -8,7 +8,7 @@ you check out the project, you need to do the following before
 you attempt to run this project:
 
 1. Edit the `web.xml` file and change
-   the `project.basedir` configuration option to the correct path to this example project. See Issue #2 for more details.
+   the `project.basedir` configuration option to the correct path to this example project. See issue #2 for more details.
 
 ## Running the application in dev mode
 
