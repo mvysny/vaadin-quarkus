@@ -3,20 +3,15 @@ package org.acme.servlet;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
-import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.server.PWA;
 
 /**
  * @author Martin Vysny <mavi@vaadin.com>
  */
-@PWA(name = "Project Base for Vaadin", shortName = "Project Base", enableInstallPrompt = false)
-@Route("")
-@CssImport(value = "./styles/vaadin-text-field-styles.css", themeFor = "vaadin-text-field")
-@CssImport("./styles/shared-styles.css")
+@Route(value = "", layout = MainLayout.class)
 public class WelcomeRoute extends VerticalLayout {
     public WelcomeRoute() {
         // Use TextField for standard text input
@@ -35,9 +30,6 @@ public class WelcomeRoute extends VerticalLayout {
         // You can specify keyboard shortcuts for buttons.
         // Example: Pressing enter in this view clicks the Button.
         button.addClickShortcut(Key.ENTER);
-
-        // Use custom CSS classes to apply styling. This is defined in shared-styles.css.
-        addClassName("centered-content");
 
         add(textField, button);
     }
