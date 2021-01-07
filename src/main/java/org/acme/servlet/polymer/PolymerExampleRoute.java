@@ -13,5 +13,15 @@ public class PolymerExampleRoute extends VerticalLayout {
     public PolymerExampleRoute() {
         add(new Span("A PolymerTemplate component demo"));
         add(new HelloWorld());
+
+        // demo the @Id annotation working well with PolymerTemplate
+        final UserForm.User user = new UserForm.User();
+        user.setFirstName("Hello");
+        user.setLastName("World");
+        user.setEmail("hello@world.earth");
+        user.setComment("Hi!");
+        final UserForm userForm = new UserForm();
+        add(userForm);
+        userForm.setBean(user);
     }
 }
