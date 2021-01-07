@@ -1,4 +1,4 @@
-package org.acme.servlet;
+package org.acme.servlet.main;
 
 public class GreetService {
 

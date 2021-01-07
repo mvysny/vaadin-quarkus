@@ -1,8 +1,9 @@
-package org.acme.servlet;
+package org.acme.servlet.about;
 
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
+import org.acme.servlet.MainLayout;
 
 /**
  * @author Martin Vysny <mavi@vaadin.com>

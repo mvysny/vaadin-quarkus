@@ -1,4 +1,4 @@
-package org.acme.servlet;
+package org.acme.servlet.main;
 
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
@@ -7,13 +7,14 @@ import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
+import org.acme.servlet.MainLayout;
 
 /**
  * @author Martin Vysny <mavi@vaadin.com>
  */
 @Route(value = "", layout = MainLayout.class)
-public class WelcomeRoute extends VerticalLayout {
-    public WelcomeRoute() {
+public class MainRoute extends VerticalLayout {
+    public MainRoute() {
         // Use TextField for standard text input
         TextField textField = new TextField("Your name");
         textField.addThemeName("bordered");

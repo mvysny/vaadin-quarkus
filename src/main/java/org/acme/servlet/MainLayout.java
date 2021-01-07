@@ -6,6 +6,9 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.RouterLayout;
 import com.vaadin.flow.router.RouterLink;
 import com.vaadin.flow.server.PWA;
+import org.acme.servlet.about.AboutRoute;
+import org.acme.servlet.main.MainRoute;
+import org.acme.servlet.polymer.PolymerExampleRoute;
 
 /**
  * @author Martin Vysny <mavi@vaadin.com>
@@ -18,6 +21,10 @@ public class MainLayout extends VerticalLayout implements RouterLayout {
         // Use custom CSS classes to apply styling. This is defined in shared-styles.css.
         addClassName("centered-content");
 
-        add(new HorizontalLayout(new RouterLink("Welcome", WelcomeRoute.class), new RouterLink("About", AboutRoute.class)));
+        add(new HorizontalLayout(
+                new RouterLink("Welcome", MainRoute.class),
+                new RouterLink("Polymer", PolymerExampleRoute.class),
+                new RouterLink("About", AboutRoute.class)
+        ));
     }
 }
