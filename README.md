@@ -1,6 +1,6 @@
 # Vaadin+Quarkus example project
 
-> Work on this project has been sponsored by [Inacta AG](https://inacta.ch).
+> Work on this project has been kindly sponsored by [Inacta AG](https://inacta.ch).
 
 This project runs [Vaadin 14](https://vaadin.com/) on top of Quarkus: https://quarkus.io/ .
 The JBoss Undertow Servlet container is used to run Vaadin Servlet.
