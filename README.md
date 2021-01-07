@@ -25,6 +25,7 @@ Support for the following features is demoed in this project:
    a PolymerTemplate-based form with fields exposed to the server-side via the `@Id` annotation.
 3. A custom `ServletContextListener` which is able to run certain functionality before the app
    starts; see the `Bootstrap` class for more details.
+4. Both development and production modes are supported.
 
 Known limitations:
 
@@ -40,18 +41,16 @@ You can run your application in dev mode that enables live coding using:
 
 ## Packaging and running the application in production mode
 
-> Unsupported at the moment; to be worked on.
-
 The application can be packaged using:
 ```shell script
-./mvnw package
+./mvnw package -Pproduction
 ```
 It produces the `code-with-quarkus-1.0.0-SNAPSHOT-runner.jar` file in the `/target` directory.
 Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/lib` directory.
 
 If you want to build an _über-jar_, execute the following command:
 ```shell script
-./mvnw package -Dquarkus.package.type=uber-jar
+./mvnw package -Dquarkus.package.type=uber-jar -Pproduction
 ```
 
 The application is now runnable using `java -jar target/code-with-quarkus-1.0.0-SNAPSHOT-runner.jar`.
