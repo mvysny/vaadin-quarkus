@@ -10,7 +10,8 @@ you check out the project, you need to do the following before
 you attempt to run this project:
 
 1. Edit the `web.xml` file and change
-   the `project.basedir` configuration option to the correct path to this example project. See issue #2 for more details.
+   the `project.basedir` configuration option to the correct path to this example project.
+   See [Issue #2](https://github.com/mvysny/vaadin-quarkus/issues/2) for more details.
    (note that this is not needed for Vaadin 19+Quarkus, see the v19 branch for more details).
 
 ## Demoed Vaadin features
@@ -84,3 +85,5 @@ to work properly (e.g. `@NpmPackage`-related classes). Quarkus prefers the [Jand
 however such index is not available for Vaadin components, see [Issue #3](https://github.com/mvysny/vaadin-quarkus/issues/3)
 for more details. Workaround is to enable Quarkus class auto-discovery; see the `application.properties`
 file for more details.
+
+The `web.xml` file is needed to work around [Issue #2](https://github.com/mvysny/vaadin-quarkus/issues/2).
