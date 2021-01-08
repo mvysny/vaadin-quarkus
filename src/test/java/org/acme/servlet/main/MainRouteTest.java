@@ -22,7 +22,7 @@ public class MainRouteTest extends AbstractAppTest {
     }
 
     @Test
-    public void smoke() {
+    public void clickingTheButtonGreetsTheUser() {
         _setValue(_get(TextField.class, spec -> spec.withCaption("Your name")), "Martin");
         _click(_get(Button.class, spec -> spec.withCaption("Say hello")));
         expectNotifications("Hello Martin");

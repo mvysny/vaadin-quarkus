@@ -20,16 +20,16 @@ import java.io.Serializable;
 public class UserForm extends PolymerTemplate<TemplateModel> {
 
     @Id("email")
-    private TextField email;
+    TextField email;
 
     @Id("first-name")
-    private TextField firstName;
+    TextField firstName;
 
     @Id("last-name")
-    private TextField lastName;
+    TextField lastName;
 
     @Id("comments")
-    private TextArea comment;
+    TextArea comment;
 
     public static class User implements Serializable {
         private String email;
