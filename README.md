@@ -5,15 +5,6 @@
 This project runs [Vaadin 14](https://vaadin.com/) on top of Quarkus: https://quarkus.io/ .
 The JBoss Undertow Servlet container is used to run Vaadin Servlet.
 
-THIS IS A WORK IN PROGRESS - there are a couple of rough edges here and there. After
-you check out the project, you need to do the following before
-you attempt to run this project:
-
-1. Edit the `web.xml` file and change
-   the `project.basedir` configuration option to the correct path to this example project.
-   See [Issue #2](https://github.com/mvysny/vaadin-quarkus/issues/2) for more details.
-   (note that this is not needed for Vaadin 19+Quarkus, see the v19 branch for more details).
-
 ## Demoed Vaadin features
 
 Support for the following features is demoed in this project:
