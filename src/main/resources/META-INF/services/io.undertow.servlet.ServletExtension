@@ -1,0 +1,2 @@
+org.acme.servlet.VaadinServletExtension
+io.quarkus.undertow.runtime.UndertowHandlersConfServletExtension
