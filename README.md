@@ -2,8 +2,8 @@
 
 > Work on this project has been kindly sponsored by [Inacta AG](https://inacta.ch).
 
-This project runs [Vaadin 14](https://vaadin.com/) on top of Quarkus: https://quarkus.io/ .
-The JBoss Undertow Servlet container is used to run Vaadin Servlet.
+This project runs [Vaadin 14](https://vaadin.com/) on top of [Quarkus](https://quarkus.io/).
+The [JBoss Undertow Servlet container](https://undertow.io/) is used to run the Vaadin Servlet.
 
 ## Demoed Vaadin features
 
@@ -17,6 +17,7 @@ Support for the following features is demoed in this project:
 3. A custom `ServletContextListener` which is able to run certain functionality before the app
    starts; see the `Bootstrap` class for more details.
 4. Both development and production modes are supported.
+5. Fast testing with [Karibu-Testing](https://github.com/mvysny/karibu-testing).
 
 Known limitations:
 
