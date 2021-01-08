@@ -68,6 +68,16 @@ public class UserForm extends PolymerTemplate<TemplateModel> {
         public void setComment(String comment) {
             this.comment = comment;
         }
+
+        @Override
+        public String toString() {
+            return "User{" +
+                    "email='" + email + '\'' +
+                    ", firstName='" + firstName + '\'' +
+                    ", lastName='" + lastName + '\'' +
+                    ", comment='" + comment + '\'' +
+                    '}';
+        }
     }
 
     private Binder<User> binder;
