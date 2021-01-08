@@ -19,6 +19,8 @@
     <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
     <failOnMissingWebXml>false</failOnMissingWebXml>
     <vaadin.version>14.4.5</vaadin.version>
+    <junit.jupiter.version>5.7.0</junit.jupiter.version>
+    <kotlin.version>1.4.21</kotlin.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -103,6 +105,31 @@
       <groupId>org.jboss.slf4j</groupId>
       <artifactId>slf4j-jboss-logmanager</artifactId>
       <version>1.1.0.Final</version>
+    </dependency>
+    <!-- Browserless Testing, see https://github.com/mvysny/karibu-testing -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>${junit.jupiter.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>${junit.jupiter.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.mvysny.kaributesting</groupId>
+      <artifactId>karibu-testing-v10</artifactId>
+      <version>1.2.6</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-stdlib</artifactId>
+      <version>${kotlin.version}</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
   <build>
