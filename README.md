@@ -76,5 +76,3 @@ to work properly (e.g. `@NpmPackage`-related classes). Quarkus prefers the [Jand
 however such index is not available for Vaadin components, see [Issue #3](https://github.com/mvysny/vaadin-quarkus/issues/3)
 for more details. Workaround is to enable Quarkus class auto-discovery; see the `application.properties`
 file for more details.
-
-The `web.xml` file is needed to work around [Issue #2](https://github.com/mvysny/vaadin-quarkus/issues/2).
