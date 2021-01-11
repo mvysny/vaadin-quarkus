@@ -10,6 +10,7 @@ import com.vaadin.flow.router.Route;
 import org.acme.servlet.MainLayout;
 
 /**
+ * Port of the "Skeleton Starter" Vaadin app on top of Quarkus+Undertow.
  * @author Martin Vysny <mavi@vaadin.com>
  */
 @Route(value = "", layout = MainLayout.class)

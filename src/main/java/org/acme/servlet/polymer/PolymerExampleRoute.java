@@ -8,7 +8,8 @@ import com.vaadin.flow.router.Route;
 import org.acme.servlet.MainLayout;
 
 /**
- * Demoes PolymerTemplate-based components and forms.
+ * Demoes that PolymerTemplate-based components and forms works correctly on
+ * top of Quarkus.
  * @author Martin Vysny <mavi@vaadin.com>
  */
 @Route(value = "polymer", layout = MainLayout.class)

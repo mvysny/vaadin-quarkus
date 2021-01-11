@@ -15,18 +15,19 @@ import java.nio.file.Paths;
 import java.util.Objects;
 
 /**
- * Workaround for workaround for https://github.com/mvysny/vaadin-quarkus/issues/2
+ * Workaround for https://github.com/mvysny/vaadin-quarkus/issues/2
  * @author Martin Vysny <mavi@vaadin.com>
  */
 public class VaadinServletExtension implements ServletExtension {
     @Override
     public void handleDeployment(DeploymentInfo deploymentInfo, ServletContext servletContext) {
-        // workaround for workaround for https://github.com/mvysny/vaadin-quarkus/issues/2
-        // in development mode, Vaadin will fail to load the token file
-        // (because token file resides in a separate classloader) and will fail with an exception.
-        // in production mode, Vaadin is able to locate the token file and this workaround is not needed.
-
-        // during the development mode, the token file will be located in target/classes/META-INF/VAADIN/config/flow-build-info.json
+        // workaround for https://github.com/mvysny/vaadin-quarkus/issues/2 .
+        //
+        // In development mode, Vaadin will fail to load the token file
+        // (because the token file resides in a separate classloader) and will fail with an exception.
+        // In production mode, Vaadin is able to locate the token file and this workaround is not needed.
+        //
+        // During the development mode, the token file will be located in target/classes/META-INF/VAADIN/config/flow-build-info.json
         // as a file on the filesystem; therefore the resource will successfully resolve to a File.
         // During the production mode, the token file will be located in a jar file, thus will
         // fail to resolve to a File and "tokenFile" will be null. That is fine, since
@@ -34,7 +35,7 @@ public class VaadinServletExtension implements ServletExtension {
         final File tokenFile = getResourceAsFile("META-INF/VAADIN/config/flow-build-info.json");
         if (tokenFile != null) {
             log.info("Token file found on filesystem, forcing Vaadin to use it: " + tokenFile);
-            // force Vaadin to load the token file in dev mode explicitly from a file.
+            // Force Vaadin to load the token file in dev mode explicitly from given file.
             // workaround for https://github.com/mvysny/vaadin-quarkus/issues/2
             servletContext.setInitParameter(FrontendUtils.PARAM_TOKEN_FILE, tokenFile.getAbsolutePath());
         } else {

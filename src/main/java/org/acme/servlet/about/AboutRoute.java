@@ -6,6 +6,8 @@ import com.vaadin.flow.router.Route;
 import org.acme.servlet.MainLayout;
 
 /**
+ * A very simple demo route, demoes the ability of Quarkus+Undertow to discover
+ * all routes on the classpath.
  * @author Martin Vysny <mavi@vaadin.com>
  */
 @Route(value = "about", layout = MainLayout.class)
