@@ -6,10 +6,15 @@ import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 import com.vaadin.flow.component.textfield.TextArea;
 import com.vaadin.flow.component.textfield.TextField;
+import com.vaadin.flow.data.binder.BeanValidationBinder;
 import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.data.validator.EmailValidator;
 import com.vaadin.flow.templatemodel.TemplateModel;
+import org.hibernate.validator.constraints.Length;
+import org.jetbrains.annotations.NotNull;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 
 /**
@@ -32,8 +37,14 @@ public class UserForm extends PolymerTemplate<TemplateModel> {
     TextArea comment;
 
     public static class User implements Serializable {
+        @NotEmpty
+        @Email
         private String email;
+        @NotEmpty
+        @Length(min = 2)
         private String firstName;
+        @NotEmpty
+        @Length(min = 2)
         private String lastName;
         private String comment;
 
@@ -80,11 +91,10 @@ public class UserForm extends PolymerTemplate<TemplateModel> {
         }
     }
 
-    private Binder<User> binder;
+    @NotNull
+    private final Binder<User> binder = new BeanValidationBinder<>(User.class);
 
     private void initBinder() {
-        binder = new Binder<>();
-
         // email
         binder.forField(email).withValidator(
                 new EmailValidator("This doesn't look like a valid email address")
@@ -107,30 +117,8 @@ public class UserForm extends PolymerTemplate<TemplateModel> {
         initBinder();
     }
 
-
-
-    /**
-     * Connects the bean to the binder.
-     *
-     * @param user bean
-     */
-    public void setBean(User user) {
-        binder.setBean(user);
-    }
-
-    /**
-     * Clears the form and disconnnect any bean.
-     */
-    public void removeBean() {
-        binder.removeBean();
-    }
-
-    /**
-     * Gets the binder of the UserForm
-     *
-     * @return binder it binds the fields of an object to the fields shown
-     */
-    public User getBean() {
-        return binder.getBean();
+    @NotNull
+    public Binder<User> getBinder() {
+        return binder;
     }
 }

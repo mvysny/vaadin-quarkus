@@ -14,10 +14,11 @@ Support for the following features is demoed in this project:
 2. The PolymerTemplate-based components and forms: the `HelloWorld` component
    demoes a reusable PolymerTemplate-based component with a custom TemplateModel, while `UserForm` demoes
    a PolymerTemplate-based form with fields exposed to the server-side via the `@Id` annotation.
-3. A custom `ServletContextListener` which is able to run certain functionality before the app
+3. Form validation via JSR-303, `BeanValidationBinder` and hibernate-validator
+4. A custom `ServletContextListener` which is able to run certain functionality before the app
    starts; see the `Bootstrap` class for more details.
-4. Both development and production modes are supported.
-5. Fast testing with [Karibu-Testing](https://github.com/mvysny/karibu-testing).
+5. Both development and production modes are supported.
+6. Fast testing with [Karibu-Testing](https://github.com/mvysny/karibu-testing).
 
 Known limitations:
 
