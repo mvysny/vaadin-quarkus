@@ -7,6 +7,9 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 import org.acme.servlet.MainLayout;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Demoes that PolymerTemplate-based components and forms works correctly on
  * top of Quarkus.
@@ -28,6 +31,8 @@ public class PolymerExampleRoute extends VerticalLayout {
         user.setLastName("World");
         user.setEmail("hello@world.earth");
         user.setComment("Hi!");
+
+        // demo a PolymerTemplate-based form
         final UserForm userForm = new UserForm();
         add(userForm);
         userForm.getBinder().readBean(user);
@@ -39,5 +44,14 @@ public class PolymerExampleRoute extends VerticalLayout {
                 Notification.show("Please correct validation errors");
             }
         }));
+
+        // demo a dom-repeat
+        final List<UserForm.User> users = new ArrayList<>();
+        users.add(new UserForm.User("jd@foo.bar", "John", "D"));
+        users.add(new UserForm.User("janed@foo.bar", "Jane", "D"));
+        users.add(new UserForm.User("miked@foo.bar", "Mike", "D"));
+        final UserTable userTable = new UserTable();
+        userTable.setUsers(users);
+        add(userTable);
     }
 }

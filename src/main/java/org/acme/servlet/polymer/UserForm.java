@@ -89,6 +89,15 @@ public class UserForm extends PolymerTemplate<TemplateModel> {
                     ", comment='" + comment + '\'' +
                     '}';
         }
+
+        public User() {
+        }
+
+        public User(String email, String firstName, String lastName) {
+            this.email = email;
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
     }
 
     @NotNull
