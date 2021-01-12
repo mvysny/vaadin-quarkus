@@ -37,3 +37,4 @@ nb-configuration.xml
 
 node_modules
 webpack.generated.js
+pnpmfile.js
