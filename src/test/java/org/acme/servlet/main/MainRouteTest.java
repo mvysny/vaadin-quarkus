@@ -1,11 +1,9 @@
 package org.acme.servlet.main;
 
-import com.github.mvysny.kaributesting.v10.NotificationsKt;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.textfield.TextField;
 import org.acme.servlet.AbstractAppTest;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -19,6 +17,7 @@ public class MainRouteTest extends AbstractAppTest {
     @BeforeEach
     public void navigate() {
         UI.getCurrent().navigate(MainRoute.class);
+        _assertOne(MainRoute.class);
     }
 
     @Test

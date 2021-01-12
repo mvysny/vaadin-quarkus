@@ -17,6 +17,7 @@ public class PolymerExampleRouteTest extends AbstractAppTest {
     @BeforeEach
     public void navigate() {
         UI.getCurrent().navigate(PolymerExampleRoute.class);
+        _assertOne(PolymerExampleRoute.class);
     }
 
     @Test

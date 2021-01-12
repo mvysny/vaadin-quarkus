@@ -7,6 +7,7 @@ import com.vaadin.flow.router.RouterLayout;
 import com.vaadin.flow.router.RouterLink;
 import com.vaadin.flow.server.PWA;
 import org.acme.servlet.about.AboutRoute;
+import org.acme.servlet.clientcallable.ClientCallableRoute;
 import org.acme.servlet.main.MainRoute;
 import org.acme.servlet.polymer.PolymerExampleRoute;
 
@@ -24,6 +25,7 @@ public class MainLayout extends VerticalLayout implements RouterLayout {
         add(new HorizontalLayout(
                 new RouterLink("Welcome", MainRoute.class),
                 new RouterLink("Polymer", PolymerExampleRoute.class),
+                new RouterLink("ClientCallable", ClientCallableRoute.class),
                 new RouterLink("About", AboutRoute.class)
         ));
     }
