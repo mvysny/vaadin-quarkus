@@ -18,7 +18,7 @@
     <compiler-plugin.version>3.8.1</compiler-plugin.version>
     <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
     <failOnMissingWebXml>false</failOnMissingWebXml>
-    <vaadin.version>14.4.5</vaadin.version>
+    <vaadin.version>14.4.6</vaadin.version>
     <junit.jupiter.version>5.7.0</junit.jupiter.version>
     <kotlin.version>1.4.21</kotlin.version>
   </properties>
@@ -122,7 +122,7 @@
     <dependency>
       <groupId>com.github.mvysny.kaributesting</groupId>
       <artifactId>karibu-testing-v10</artifactId>
-      <version>1.2.6</version>
+      <version>1.2.7</version>
       <scope>test</scope>
     </dependency>
     <dependency>
