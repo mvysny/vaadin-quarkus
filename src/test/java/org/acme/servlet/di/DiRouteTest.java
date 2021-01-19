@@ -1,27 +1,29 @@
-package org.acme.servlet.about;
+package org.acme.servlet.di;
 
 import com.vaadin.flow.component.UI;
-import com.vaadin.flow.component.html.Span;
 import io.quarkus.test.junit.QuarkusTest;
 import org.acme.servlet.AbstractAppTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static com.github.mvysny.kaributesting.v10.LocatorJ._assertOne;
+import static com.github.mvysny.kaributesting.v10.LocatorJ._get;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 /**
  * @author Martin Vysny <mavi@vaadin.com>
  */
 @QuarkusTest
-public class AboutRouteTest extends AbstractAppTest {
+public class DiRouteTest extends AbstractAppTest {
+
     @BeforeEach
     public void navigate() {
-        UI.getCurrent().navigate(AboutRoute.class);
-        _assertOne(AboutRoute.class);
+        UI.getCurrent().navigate(DiRoute.class);
+        _assertOne(DiRoute.class);
     }
 
     @Test
-    public void smoke() {
-        _assertOne(Span.class);
+    public void verifyDiWorks() {
+        assertNotNull(_get(DiRoute.class).myService);
     }
 }
