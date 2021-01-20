@@ -5,6 +5,9 @@
 This project runs [Vaadin 14](https://vaadin.com/) on top of [Quarkus](https://quarkus.io/).
 The [JBoss Undertow Servlet container](https://undertow.io/) is used to run the Vaadin Servlet.
 
+Uses [Vaadin Quarkus Extension](https://github.com/urosporo/vaadin-quarkus-extension-parent)
+to run smoothly on top of Quarkus.
+
 ## Demoed Vaadin features
 
 Support for the following features is demoed in this project:
@@ -19,6 +22,8 @@ Support for the following features is demoed in this project:
    starts; see the `Bootstrap` class for more details.
 5. Both development and production modes are supported.
 6. Fast testing with [Karibu-Testing](https://github.com/mvysny/karibu-testing).
+7. Dependency injection is supported: you can inject beans into Vaadin `@Route`-annotated
+   views.
 
 Known limitations:
 
