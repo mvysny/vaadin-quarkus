@@ -101,7 +101,7 @@
     <dependency>
       <groupId>com.github.mvysny.kaributesting</groupId>
       <artifactId>karibu-testing-v10</artifactId>
-      <version>1.2.8-SNAPSHOT</version>
+      <version>1.2.8</version>
       <scope>test</scope>
     </dependency>
     <dependency>
