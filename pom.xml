@@ -49,7 +49,6 @@
     </dependency>
     <dependency>
       <groupId>com.vaadin</groupId>
-      <!-- Replace artifactId with vaadin-core to use only free components -->
       <artifactId>vaadin-core</artifactId>
       <exclusions>
         <!-- Webjars are only needed when running in Vaadin 13 compatibility mode -->
