@@ -24,5 +24,12 @@ jobs:
         path: |
           ~/.m2/repository
         key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml', '.mvn/wrapper/maven-wrapper.properties') }}
+    - name: Cache pnpm packages
+      uses: actions/cache@v2
+      with:
+        path: |
+          ~/.vaadin
+          ~/.pnpm-store
+        key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml', '**/package.json') }}
     - name: Build with Maven
       run: ./mvnw -C -B -e -V clean install -Pproduction
