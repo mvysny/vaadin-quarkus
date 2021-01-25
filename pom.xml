@@ -19,6 +19,12 @@
     <junit.jupiter.version>5.7.0</junit.jupiter.version>
     <kotlin.version>1.4.21</kotlin.version>
   </properties>
+  <repositories>
+    <repository>
+      <id>bintray-mbrem</id>
+      <url>https://dl.bintray.com/mbrem/urosporo</url>
+    </repository>
+  </repositories>
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -42,7 +48,7 @@
     <dependency>
       <groupId>com.urosporo</groupId>
       <artifactId>vaadin-quarkus-extension</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
+      <version>1.0.0-RC1</version>
     </dependency>
     <dependency>
       <groupId>com.vaadin</groupId>
