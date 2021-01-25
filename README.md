@@ -24,6 +24,7 @@ Support for the following features is demoed in this project:
 6. Fast testing with [Karibu-Testing](https://github.com/mvysny/karibu-testing).
 7. Dependency injection is supported: you can inject beans into Vaadin `@Route`-annotated
    views.
+8. Adding third-party components from [Vaadin Directory](https://vaadin.com/directory) works.
 
 Known limitations:
 
@@ -55,21 +56,7 @@ The application is now runnable using `java -jar target/code-with-quarkus-1.0.0-
 
 ## Creating a native executable
 
-> Unsupported at the moment; to be worked on.
-
-You can create a native executable using: 
-```shell script
-./mvnw -C clean package -Pnative
-```
-
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
-```shell script
-./mvnw -C clean package -Pnative -Dquarkus.native.container-build=true
-```
-
-You can then execute your native executable with: `./target/code-with-quarkus-1.0.0-SNAPSHOT-runner`
-
-If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.html.
+Unsupported.
 
 ## How this works
 
@@ -82,3 +69,19 @@ to work properly (e.g. `@NpmPackage`-related classes). Quarkus prefers the [Jand
 however such index is not available for Vaadin components, see [Issue #3](https://github.com/mvysny/vaadin-quarkus/issues/3)
 for more details. Workaround is to enable Quarkus class auto-discovery; see the `application.properties`
 file for more details.
+
+## Adding Third-party components
+
+In order for Vaadin to correctly discover `@NpmModule`-annotated classes
+for third-party components added from Vaadin Directory, they need to package the
+Jandex index. Often they don't, therefore it's important to take advantage
+of `quarkus.index-dependency` and add those third-party
+components to `application.properties`.
+
+For example, in order to use the [Multiselect ComboBox](https://github.com/gatanaso/multiselect-combo-box-flow),
+you need to add the following lines to your `application.properties`:
+
+```
+quarkus.index-dependency.multiselect-combo-box-flow.group-id=org.vaadin.gatanaso
+quarkus.index-dependency.multiselect-combo-box-flow.artifact-id=multiselect-combo-box-flow
+```

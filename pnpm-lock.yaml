@@ -35,6 +35,7 @@ dependencies:
   '@vaadin/vaadin-upload': 4.4.1
   '@webcomponents/webcomponentsjs': 2.5.0
   lit-element: 2.4.0
+  multiselect-combo-box: 2.4.2
 devDependencies:
   chokidar: 3.5.0
   compression-webpack-plugin: 4.0.1_webpack@4.42.0
@@ -4633,6 +4634,18 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-ji6J5enbMyGRHIAkAOu3WdV8nggqviKCEKtXcOqfphZZtQrmHKycfynJ2V7eVPUA4NhJ6V7Wf4TmGbTwKE9B6g==
+  /multiselect-combo-box/2.4.2:
+    dependencies:
+      '@polymer/polymer': 3.2.0
+      '@vaadin/vaadin-combo-box': 5.4.7
+      '@vaadin/vaadin-control-state-mixin': 2.2.4
+      '@vaadin/vaadin-lumo-styles': 1.6.1
+      '@vaadin/vaadin-material-styles': 1.3.2
+      '@vaadin/vaadin-text-field': 2.8.2
+      '@vaadin/vaadin-themable-mixin': 1.6.2
+    dev: false
+    resolution:
+      integrity: sha512-1DktGvAkmoG4ANtKrCFUXazgQN4Ya43AAOFl1EG8y4+xYOa/Gi49sa4Q3/unWZgoU26HCmeSDTJuf2ZJXgJCFw==
   /nanomatch/1.2.13:
     dependencies:
       arr-diff: 4.0.0
@@ -6576,6 +6589,7 @@ specifiers:
   compression-webpack-plugin: 4.0.1
   copy-webpack-plugin: 5.1.2
   lit-element: ^2.2.1
+  multiselect-combo-box: 2.4.2
   raw-loader: 3.1.0
   webpack: 4.42.0
   webpack-babel-multi-target-plugin: 2.3.3

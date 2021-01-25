@@ -39,7 +39,8 @@
       "@vaadin/vaadin-lumo-styles": "1.6.0",
       "@vaadin/vaadin-material-styles": "1.3.2",
       "@polymer/paper-input": "3.0.2",
-      "@vaadin/vaadin-menu-bar": "1.2.1"
+      "@vaadin/vaadin-menu-bar": "1.2.1",
+      "multiselect-combo-box": "2.4.2"
     },
     "devDependencies": {
       "webpack-babel-multi-target-plugin": "2.3.3",
@@ -52,7 +53,7 @@
       "webpack-merge": "4.2.2",
       "webpack-dev-server": "3.11.0"
     },
-    "hash": "ae59faedf0bb96d4945f6e2607b7eb656ee8c7f03305cbe3383ca573e224924f"
+    "hash": "2c85c848bc060719da0001c120f67bc412217a0fffda87ced1c4bafe527e8a54"
   },
   "dependencies": {
     "lit-element": "^2.2.1",
@@ -90,7 +91,8 @@
     "@vaadin/vaadin-radio-button": "1.5.1",
     "@vaadin/vaadin-lumo-styles": "1.6.0",
     "@vaadin/vaadin-material-styles": "1.3.2",
-    "@polymer/paper-input": "3.0.2"
+    "@polymer/paper-input": "3.0.2",
+    "multiselect-combo-box": "2.4.2"
   },
   "devDependencies": {
     "webpack-babel-multi-target-plugin": "2.3.3",
