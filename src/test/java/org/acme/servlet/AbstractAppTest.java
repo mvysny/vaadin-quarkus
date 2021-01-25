@@ -1,11 +1,12 @@
 package org.acme.servlet;
 
 import com.github.mvysny.kaributesting.v10.MockVaadin;
-import com.github.mvysny.kaributesting.v10.Routes;
-import org.junit.jupiter.api.AfterAll;
+import com.github.mvysny.kaributesting.v10.mock.MockedUI;
+import com.urosporo.quarkus.vaadin.cdi.QuarkusVaadinServlet;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+
+import javax.inject.Inject;
 
 /**
  * Tests the UI. Uses the Browserless testing approach as provided by the
@@ -14,21 +15,12 @@ import org.junit.jupiter.api.BeforeEach;
  * @author Martin Vysny <mavi@vaadin.com>
  */
 public abstract class AbstractAppTest {
-    private static final Routes routes = new Routes().autoDiscoverViews("org.acme.servlet");
-
-    @BeforeAll
-    public static void startupApp() {
-        new Bootstrap().contextInitialized(null);
-    }
-
-    @AfterAll
-    public static void tearDownApp() {
-        new Bootstrap().contextDestroyed(null);
-    }
+    @Inject
+    QuarkusVaadinServlet servlet;
 
     @BeforeEach
     public void mockVaadin() {
-        MockVaadin.setup(routes);
+        MockVaadin.setup(MockedUI::new, servlet);
     }
 
     @AfterEach

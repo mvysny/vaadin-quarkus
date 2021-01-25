@@ -3,6 +3,7 @@ package org.acme.servlet.main;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.textfield.TextField;
+import io.quarkus.test.junit.QuarkusTest;
 import org.acme.servlet.AbstractAppTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -13,6 +14,7 @@ import static com.github.mvysny.kaributesting.v10.NotificationsKt.expectNotifica
 /**
  * @author Martin Vysny <mavi@vaadin.com>
  */
+@QuarkusTest
 public class MainRouteTest extends AbstractAppTest {
     @BeforeEach
     public void navigate() {
