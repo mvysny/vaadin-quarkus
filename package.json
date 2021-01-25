@@ -53,7 +53,7 @@
       "webpack-merge": "4.2.2",
       "webpack-dev-server": "3.11.0"
     },
-    "hash": "2c85c848bc060719da0001c120f67bc412217a0fffda87ced1c4bafe527e8a54"
+    "hash": "73de292ab9368bc85b349a77f65bd94f9d91076be25718d8806ccf6c39cc124c"
   },
   "dependencies": {
     "lit-element": "^2.2.1",
@@ -64,7 +64,6 @@
     "@vaadin/vaadin-icons": "4.3.2",
     "@vaadin/vaadin-split-layout": "4.3.0",
     "@vaadin/vaadin-combo-box": "5.4.7",
-    "@vaadin/vaadin-core-shrinkwrap": "14.4.6",
     "@vaadin/vaadin-upload": "4.4.1",
     "@vaadin/vaadin-dialog": "2.5.2",
     "@vaadin/vaadin-select": "2.4.0",
@@ -92,7 +91,9 @@
     "@vaadin/vaadin-lumo-styles": "1.6.0",
     "@vaadin/vaadin-material-styles": "1.3.2",
     "@polymer/paper-input": "3.0.2",
-    "multiselect-combo-box": "2.4.2"
+    "multiselect-combo-box": "2.4.2",
+    "@vaadin/vaadin-menu-bar": "1.2.1",
+    "@vaadin/vaadin-core-shrinkwrap": "14.4.6"
   },
   "devDependencies": {
     "webpack-babel-multi-target-plugin": "2.3.3",
