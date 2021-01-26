@@ -14,7 +14,7 @@ import org.vaadin.gatanaso.MultiselectComboBox;
 public class ThirdPartyRoute extends VerticalLayout {
     public ThirdPartyRoute() {
         add(new Span("Demoes a third-party component from Vaadin Directory"));
-        MultiselectComboBox<String> multiselectComboBox = new MultiselectComboBox();
+        MultiselectComboBox<String> multiselectComboBox = new MultiselectComboBox<>();
         multiselectComboBox.setLabel("Select items");
         multiselectComboBox.setItems("Item 1", "Item 2", "Item 3", "Item 4");
         add(multiselectComboBox);
