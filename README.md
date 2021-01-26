@@ -65,10 +65,9 @@ are used to take advantage of the [Undertow](https://undertow.io/) Servlet Conta
 in order to run Vaadin Servlet seamlessly in the servlet environment.
 
 Quarkus-Undertow integration needs special magic to auto-discover classes which Vaadin needs
-to work properly (e.g. `@NpmPackage`-related classes). Quarkus prefers the [Jandex Index](https://quarkus.io/guides/cdi-reference)
-however such index is not available for Vaadin components, see [Issue #3](https://github.com/mvysny/vaadin-quarkus/issues/3)
-for more details. Workaround is to enable Quarkus class auto-discovery; see the `application.properties`
-file for more details.
+to work properly (e.g. `@NpmPackage`-related classes). Quarkus uses the [Jandex Index](https://quarkus.io/guides/cdi-reference);
+the Jandex Index is available for Vaadin at [vaadin-jandex](https://github.com/mvysny/vaadin-jandex/)
+for more details.
 
 ## Adding Third-party components
 
