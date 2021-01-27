@@ -3,6 +3,7 @@ package org.acme.servlet.main;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
+import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
@@ -16,6 +17,8 @@ import org.acme.servlet.MainLayout;
 @Route(value = "", layout = MainLayout.class)
 public class MainRoute extends VerticalLayout {
     public MainRoute() {
+        add(new Span("Port of the \"Skeleton Starter\" Vaadin app on top of Quarkus+Undertow."));
+
         // Use TextField for standard text input
         TextField textField = new TextField("Your name");
         textField.addThemeName("bordered");
