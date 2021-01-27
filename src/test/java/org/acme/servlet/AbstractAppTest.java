@@ -2,7 +2,6 @@ package org.acme.servlet;
 
 import com.github.mvysny.kaributesting.v10.MockVaadin;
 import com.github.mvysny.kaributesting.v10.mock.MockedUI;
-import com.urosporo.quarkus.vaadin.cdi.QuarkusVaadinServlet;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
@@ -16,7 +15,7 @@ import javax.inject.Inject;
  */
 public abstract class AbstractAppTest {
     @Inject
-    QuarkusVaadinServlet servlet;
+    MockServlet servlet;
 
     @BeforeEach
     public void mockVaadin() {

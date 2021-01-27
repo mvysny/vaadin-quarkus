@@ -7,6 +7,7 @@ import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 import org.acme.servlet.MainLayout;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Demoes Vaadin Push and Websockets.
@@ -14,7 +15,9 @@ import org.acme.servlet.MainLayout;
  */
 @Route(value = "websocket", layout = MainLayout.class)
 public class PushDemoRoute extends VerticalLayout {
+    @Nullable
     private volatile Span asyncCounter;
+    private Thread thread;
 
     public PushDemoRoute() {
         add(new Span("Demoes asynchronous websocket push from server. A new value of the span below is pushed every second from the server. You can verify this easily, by opening the browser dev tools, the Networking tab and observing communication running through the ws:// pipe."));
@@ -26,28 +29,38 @@ public class PushDemoRoute extends VerticalLayout {
     protected void onAttach(AttachEvent attachEvent) {
         super.onAttach(attachEvent);
         final UI ui = UI.getCurrent();
-        new Thread(() -> {
+        thread = new Thread(() -> {
             int value = 0;
             try {
                 while (asyncCounter != null) {
-                    Thread.sleep(1000);
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        break;
+                    }
                     value++;
                     final int v = value;
-                    ui.access(() -> {
-                        if (asyncCounter != null) {
-                            asyncCounter.setText("Counter=" + v);
-                        }
-                    });
+                    if (asyncCounter != null) {
+                        ui.access(() -> {
+                            if (asyncCounter != null) {
+                                asyncCounter.setText("Counter=" + v);
+                            }
+                        });
+                    }
                 }
             } catch (Throwable t) {
                 t.printStackTrace();
             }
-        }).start();
+        });
+        thread.setDaemon(true);
+        thread.start();
     }
 
     @Override
     protected void onDetach(DetachEvent detachEvent) {
         asyncCounter = null;
+        thread.interrupt();
+        thread = null;
         super.onDetach(detachEvent);
     }
 }
