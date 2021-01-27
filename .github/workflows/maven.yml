@@ -32,4 +32,4 @@ jobs:
           ~/.pnpm-store
         key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml', '**/package.json') }}
     - name: Build with Maven
-      run: ./mvnw -C -B -e -V clean install -Pproduction
+      run: ./mvnw -C -B -e -V clean package -Pproduction

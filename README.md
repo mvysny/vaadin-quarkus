@@ -25,6 +25,7 @@ Support for the following features is demoed in this project:
 7. Dependency injection is supported: you can inject beans into Vaadin `@Route`-annotated
    views.
 8. Adding third-party components from [Vaadin Directory](https://vaadin.com/directory) works.
+9. Vaadin Push
 
 Known limitations:
 
