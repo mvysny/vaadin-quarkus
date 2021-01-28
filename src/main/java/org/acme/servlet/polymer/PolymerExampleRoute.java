@@ -1,6 +1,8 @@
 package org.acme.servlet.polymer;
 
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.html.H2;
+import com.vaadin.flow.component.html.Paragraph;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -24,17 +26,17 @@ public class PolymerExampleRoute extends VerticalLayout {
     final UserForm.User user;
 
     public PolymerExampleRoute() {
-        add(new Span("A PolymerTemplate component demo"));
+        add(new Paragraph("A PolymerTemplate-based component demo"));
+        add(new H2("Basic PolymerTemplate With Model"));
         add(new HelloWorld());
 
         // demo the @Id annotation working well with PolymerTemplate
+        add(new H2("PolymerTemplate Form With @Id"));
         user = new UserForm.User();
         user.setFirstName("Hello");
         user.setLastName("World");
         user.setEmail("hello@world.earth");
         user.setComment("Hi!");
-
-        // demo a PolymerTemplate-based form
         final UserForm userForm = new UserForm();
         add(userForm);
         userForm.getBinder().readBean(user);
@@ -48,6 +50,7 @@ public class PolymerExampleRoute extends VerticalLayout {
         }));
 
         // demo a dom-repeat
+        add(new H2("TemplateModel With a List of Beans and 'dom-repeat'"));
         final List<UserForm.User> users = new ArrayList<>();
         users.add(new UserForm.User("jd@foo.bar", "John", "D"));
         users.add(new UserForm.User("janed@foo.bar", "Jane", "D"));

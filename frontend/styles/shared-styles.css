@@ -12,3 +12,7 @@ vaadin-app-layout h1[slot="drawer"] {
   margin: 8px 16px;
   font-size: var(--lumo-font-size-xl);
 }
+
+h2 {
+  font-size: var(--lumo-font-size-xl);
+}
