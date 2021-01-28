@@ -5,6 +5,7 @@ import com.vaadin.flow.component.DetachEvent;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.acme.servlet.MainLayout;
 import org.jetbrains.annotations.Nullable;
@@ -13,6 +14,7 @@ import org.jetbrains.annotations.Nullable;
  * Demoes Vaadin Push and Websockets.
  * @author Martin Vysny <mavi@vaadin.com>
  */
+@PageTitle("Vaadin Push Demo | Vaadin Quarkus Demo")
 @Route(value = "websocket", layout = MainLayout.class)
 public class PushDemoRoute extends VerticalLayout {
     @Nullable

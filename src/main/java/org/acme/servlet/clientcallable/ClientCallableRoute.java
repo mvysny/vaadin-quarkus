@@ -3,6 +3,7 @@ package org.acme.servlet.clientcallable;
 import com.vaadin.flow.component.ClientCallable;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.acme.servlet.MainLayout;
 
@@ -10,6 +11,7 @@ import org.acme.servlet.MainLayout;
  * Demoes {@link ClientCallable}.
  * @author Martin Vysny <mavi@vaadin.com>
  */
+@PageTitle("Client Callable Demo | Vaadin Quarkus Demo")
 @Route(value = "cc", layout = MainLayout.class)
 public class ClientCallableRoute extends VerticalLayout {
     public ClientCallableRoute() {

@@ -2,6 +2,7 @@ package org.acme.servlet.thirdparty;
 
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.acme.servlet.MainLayout;
 import org.vaadin.gatanaso.MultiselectComboBox;
@@ -10,6 +11,7 @@ import org.vaadin.gatanaso.MultiselectComboBox;
  * Demoes a third-party component from Vaadin Directory.
  * @author Martin Vysny <mavi@vaadin.com>
  */
+@PageTitle("Third Party Component Integration | Vaadin Quarkus Demo")
 @Route(value = "third-party", layout = MainLayout.class)
 public class ThirdPartyRoute extends VerticalLayout {
     public ThirdPartyRoute() {

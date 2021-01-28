@@ -6,6 +6,7 @@ import com.vaadin.flow.component.html.Hr;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.acme.servlet.MainLayout;
 
@@ -15,6 +16,7 @@ import javax.inject.Inject;
  * Demoes the dependency injection of services.
  * @author Martin Vysny <mavi@vaadin.com>
  */
+@PageTitle("Dependency Injection Demo | Vaadin Quarkus Demo")
 @Route(value = "di", layout = MainLayout.class)
 public class DiRoute extends VerticalLayout {
     @Inject

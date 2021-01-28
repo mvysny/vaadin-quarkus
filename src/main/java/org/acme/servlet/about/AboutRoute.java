@@ -2,6 +2,7 @@ package org.acme.servlet.about;
 
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.acme.servlet.MainLayout;
 
@@ -10,6 +11,7 @@ import org.acme.servlet.MainLayout;
  * all routes on the classpath.
  * @author Martin Vysny <mavi@vaadin.com>
  */
+@PageTitle("About | Vaadin Quarkus Demo")
 @Route(value = "about", layout = MainLayout.class)
 public class AboutRoute extends VerticalLayout {
     public AboutRoute() {

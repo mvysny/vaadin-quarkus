@@ -4,6 +4,7 @@ import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.acme.servlet.MainLayout;
 
@@ -15,6 +16,7 @@ import java.util.List;
  * top of Quarkus.
  * @author Martin Vysny <mavi@vaadin.com>
  */
+@PageTitle("Polymer Template Demo | Vaadin Quarkus Demo")
 @Route(value = "polymer", layout = MainLayout.class)
 public class PolymerExampleRoute extends VerticalLayout {
 

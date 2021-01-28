@@ -7,6 +7,7 @@ import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
+import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.acme.servlet.MainLayout;
 
@@ -14,6 +15,7 @@ import org.acme.servlet.MainLayout;
  * Port of the "Skeleton Starter" Vaadin app on top of Quarkus+Undertow.
  * @author Martin Vysny <mavi@vaadin.com>
  */
+@PageTitle("Skeleton Starter Demo | Vaadin Quarkus Demo")
 @Route(value = "", layout = MainLayout.class)
 public class MainRoute extends VerticalLayout {
     public MainRoute() {
