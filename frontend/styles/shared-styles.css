@@ -4,8 +4,11 @@
    https://vaadin.com/themes/lumo for more information.
 */
 
-/* Example: CSS class name to center align the content . */
-.centered-content {
-  margin: 0 auto;
-  max-width: 650px;
+vaadin-app-layout h1[slot="navbar"] {
+  margin: 0;
+  font-size: var(--lumo-font-size-xl);
+}
+vaadin-app-layout h1[slot="drawer"] {
+  margin: 8px 16px;
+  font-size: var(--lumo-font-size-xl);
 }

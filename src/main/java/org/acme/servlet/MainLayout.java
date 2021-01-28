@@ -4,9 +4,7 @@ import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.html.Div;
-import com.vaadin.flow.component.html.H3;
-import com.vaadin.flow.component.html.H4;
+import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.component.page.Push;
 import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.component.tabs.Tabs;
@@ -36,7 +34,7 @@ import java.util.Map;
 @Push
 public class MainLayout extends AppLayout implements RouterLayout, AfterNavigationObserver {
 
-    private final H4 currentViewName = new H4();
+    private final H1 currentViewName = new H1();
 
     private static final Map<Class<? extends Component>, String> routes = new LinkedHashMap<>();
     static {
@@ -54,9 +52,8 @@ public class MainLayout extends AppLayout implements RouterLayout, AfterNavigati
 
     public MainLayout() {
         setPrimarySection(AppLayout.Section.DRAWER);
-        final Div spacer = new Div();
-        spacer.setWidth("8px");
-        addToNavbar(new DrawerToggle(), new H3("Vaadin Quarkus Demo"), spacer, currentViewName);
+        addToNavbar(new DrawerToggle(), currentViewName);
+        navigationTabs.getElement().setAttribute("aria-label", "Primary");
 
         navigationTabs.setOrientation(Tabs.Orientation.VERTICAL);
         for (Map.Entry<Class<? extends Component>, String> route : routes.entrySet()) {
@@ -64,6 +61,7 @@ public class MainLayout extends AppLayout implements RouterLayout, AfterNavigati
             navigationTabMap.put(route.getKey(), tab);
             navigationTabs.add(tab);
         }
+        addToDrawer(new H1("Vaadin Quarkus Demo"));
         addToDrawer(navigationTabs);
     }
 
@@ -74,7 +72,7 @@ public class MainLayout extends AppLayout implements RouterLayout, AfterNavigati
         if (routeCaption == null) {
             currentViewName.setText("");
         } else {
-            currentViewName.setText("/ " + routeCaption);
+            currentViewName.setText(routeCaption);
         }
 
         final Tab currentTab = navigationTabMap.get(routeClass);

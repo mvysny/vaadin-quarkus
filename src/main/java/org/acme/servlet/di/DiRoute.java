@@ -1,6 +1,7 @@
 package org.acme.servlet.di;
 
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.html.Hr;
 import com.vaadin.flow.component.html.Span;
@@ -29,7 +30,7 @@ public class DiRoute extends VerticalLayout {
     MyRouteScopedService myRouteScopedService;
 
     public DiRoute() {
-        add(new H3("Demoes Quarkus dependency injection and various scopes"));
+        add(new Span("Demoes Quarkus dependency injection and various scopes"));
         add(new Span("This route: " + this));
         add(new Span("Warning: pressing F5 will re-create the UI, clearing both the UI-scoped and Route-scoped beans"));
         add(new Hr());
