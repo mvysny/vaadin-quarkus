@@ -25,11 +25,12 @@ public class EventsRoute extends VerticalLayout implements AfterNavigationObserv
     private final Grid<String> eventsGrid = new Grid<>();
 
     public EventsRoute() {
+        setSizeFull();
         add(new Paragraph("Demoes the possibility to capture Vaadin events in a bean"));
         add(new H2("A list of Vaadin-specific events"));
 
         eventsGrid.addColumn(it -> it).setHeader("Events").setAutoWidth(true);
-        add(eventsGrid);
+        addAndExpand(eventsGrid);
     }
 
     @Override

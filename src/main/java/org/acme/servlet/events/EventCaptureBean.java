@@ -16,7 +16,8 @@ import java.util.List;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
- * Thread-safe.
+ * Thread-safe. Captures all Vaadin-specific events. Call {@link #getEvents()}
+ * to access the list of events.
  * @author Martin Vysny <mavi@vaadin.com>
  */
 @ApplicationScoped
