@@ -1,6 +1,7 @@
 package org.acme.servlet;
 
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.dependency.CssImport;
@@ -49,7 +50,7 @@ public class MainLayout extends AppLayout implements RouterLayout, AfterNavigati
         routes.put(AboutRoute.class, "About");
     }
 
-    private final Map<Class<?>, Tab> navigationTabMap = new HashMap<>();
+    private final Map<Class<? extends Component>, Tab> navigationTabMap = new HashMap<>();
     private final Tabs navigationTabs = new Tabs();
 
     public MainLayout() {
@@ -65,6 +66,20 @@ public class MainLayout extends AppLayout implements RouterLayout, AfterNavigati
         }
         addToDrawer(new H1("Vaadin Quarkus Demo"));
         addToDrawer(navigationTabs);
+
+        // if someone manages to click on a tab instead of on the RouterLink, perform
+        // exactly the same navigation.
+        navigationTabs.addSelectedChangeListener(e -> {
+            if (e.isFromClient()) {
+                final Class<? extends Component> route = navigationTabMap.entrySet().stream()
+                        .filter(it -> it.getValue().equals(e.getSelectedTab()))
+                        .map(it -> it.getKey())
+                        .findFirst().orElse(null);
+                if (route != null) {
+                    UI.getCurrent().navigate(route);
+                }
+            }
+        });
     }
 
     @Override
