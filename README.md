@@ -17,15 +17,21 @@ Support for the following features is demoed in this project:
 2. The PolymerTemplate-based components and forms: the `HelloWorld` component
    demoes a reusable PolymerTemplate-based component with a custom TemplateModel, while `UserForm` demoes
    a PolymerTemplate-based form with fields exposed to the server-side via the `@Id` annotation.
-3. Form validation via JSR-303, `BeanValidationBinder` and [hibernate-validator](https://hibernate.org/validator/)
+3. Form validation via JSR-303, `BeanValidationBinder` and [hibernate-validator](https://hibernate.org/validator/).
+   See `UserForm`.
 4. A custom `ServletContextListener` which is able to run certain functionality before the app
    starts; see the `Bootstrap` class for more details.
 5. Both development and production modes are supported.
 6. Fast testing with [Karibu-Testing](https://github.com/mvysny/karibu-testing).
+   See `src/test/java` for more details.
 7. Dependency injection is supported: you can inject beans into Vaadin `@Route`-annotated
-   views.
+   views. See the `DiRoute` for more details.
 8. Adding third-party components from [Vaadin Directory](https://vaadin.com/directory) works.
-9. Vaadin Push
+   See the `ThirdPartyRoute`.
+9. Vaadin Push - the `PushDemoRoute`.
+10. Bean events - demoes Vaadin-specific bean events being fired. See `EventsRoute`
+   for more details.
+11. `@ClientCallable` - see `ClientCallableRoute`
 
 Known limitations:
 
