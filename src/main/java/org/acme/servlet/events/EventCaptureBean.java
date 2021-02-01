@@ -39,6 +39,10 @@ public class EventCaptureBean {
         addEvent(e);
     }
 
+    void onServiceInitEvent(@Observes ServiceInitEvent e) {
+        addEvent(e);
+    }
+
     void onServiceDestroyEvent(@Observes ServiceDestroyEvent e) {
         addEvent(e);
     }
