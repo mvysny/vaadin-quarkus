@@ -17,6 +17,7 @@ import com.vaadin.flow.server.PWA;
 import org.acme.servlet.about.AboutRoute;
 import org.acme.servlet.clientcallable.ClientCallableRoute;
 import org.acme.servlet.di.DiRoute;
+import org.acme.servlet.dynamicroutes.DynamicRoute;
 import org.acme.servlet.events.EventsRoute;
 import org.acme.servlet.main.MainRoute;
 import org.acme.servlet.polymer.PolymerExampleRoute;
@@ -47,6 +48,7 @@ public class MainLayout extends AppLayout implements RouterLayout, AfterNavigati
         routes.put(ThirdPartyRoute.class, "Third Party Component");
         routes.put(PushDemoRoute.class, "Push Demo");
         routes.put(EventsRoute.class, "Bean Events Demo");
+        routes.put(DynamicRoute.class, "Dynamic Route");
         routes.put(AboutRoute.class, "About");
     }
 
