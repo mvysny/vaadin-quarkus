@@ -15,7 +15,7 @@
     <maven.compiler.parameters>true</maven.compiler.parameters>
     <quarkus-plugin.version>${quarkus.platform.version}</quarkus-plugin.version>
     <failOnMissingWebXml>false</failOnMissingWebXml>
-    <vaadin.version>14.4.7</vaadin.version>
+    <vaadin.version>19.0.0.alpha5</vaadin.version>
     <junit.jupiter.version>5.7.0</junit.jupiter.version>
     <kotlin.version>1.4.21</kotlin.version>
   </properties>
@@ -32,7 +32,17 @@
       <id>vaadin-addons</id>
       <url>https://maven.vaadin.com/vaadin-addons</url>
     </repository>
+    <repository>
+      <id>vaadin-prereleases</id>
+      <url>https://maven.vaadin.com/vaadin-prereleases</url>
+    </repository>
   </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>vaadin-prereleases</id>
+      <url>https://maven.vaadin.com/vaadin-prereleases</url>
+    </pluginRepository>
+  </pluginRepositories>
   <dependencyManagement>
     <dependencies>
       <dependency>
