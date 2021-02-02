@@ -15,18 +15,22 @@
     <maven.compiler.parameters>true</maven.compiler.parameters>
     <quarkus-plugin.version>${quarkus.platform.version}</quarkus-plugin.version>
     <failOnMissingWebXml>false</failOnMissingWebXml>
-    <vaadin.version>14.4.6</vaadin.version>
+    <vaadin.version>14.4.7</vaadin.version>
     <junit.jupiter.version>5.7.0</junit.jupiter.version>
     <kotlin.version>1.4.21</kotlin.version>
   </properties>
   <repositories>
+    <repository>
+      <id>jcenter</id>
+      <url>https://jcenter.bintray.com/</url>
+    </repository>
     <repository>
       <id>bintray-mbrem</id>
       <url>https://dl.bintray.com/mbrem/urosporo</url>
     </repository>
     <repository>
       <id>vaadin-addons</id>
-      <url>http://maven.vaadin.com/vaadin-addons</url>
+      <url>https://maven.vaadin.com/vaadin-addons</url>
     </repository>
   </repositories>
   <dependencyManagement>
@@ -92,7 +96,7 @@
     <dependency>
       <groupId>com.github.mvysny.vaadin-jandex</groupId>
       <artifactId>vaadin-core-jandex</artifactId>
-      <version>14.4.6-rev1</version>
+      <version>${vaadin.version}</version>
     </dependency>
     <!-- Quarkus always pulls in slf4j-jboss-logmanager into target/lib; don't use slf4j-simple -->
     <dependency>
