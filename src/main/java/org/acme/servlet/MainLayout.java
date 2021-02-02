@@ -22,6 +22,7 @@ import org.acme.servlet.events.EventsRoute;
 import org.acme.servlet.main.MainRoute;
 import org.acme.servlet.polymer.PolymerExampleRoute;
 import org.acme.servlet.pushdemo.PushDemoRoute;
+import org.acme.servlet.serviceinterfaces.ServiceInterfacesRoute;
 import org.acme.servlet.thirdparty.ThirdPartyRoute;
 
 import java.util.HashMap;
@@ -49,6 +50,7 @@ public class MainLayout extends AppLayout implements RouterLayout, AfterNavigati
         routes.put(PushDemoRoute.class, "Push Demo");
         routes.put(EventsRoute.class, "Bean Events Demo");
         routes.put(DynamicRoute.class, "Dynamic Route");
+        routes.put(ServiceInterfacesRoute.class, "Vaadin Service Interfaces");
         routes.put(AboutRoute.class, "About");
     }
 
