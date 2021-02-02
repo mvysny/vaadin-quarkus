@@ -22,5 +22,9 @@ public class ServiceInterfacesRoute extends VerticalLayout {
         add(new H2("Error Handler"));
         add(new Paragraph("Pressing the following button will throw an exception; the exception should be handled gracefully by the " + CustomErrorHandler.class.getSimpleName()));
         add(new Button("Throw", e -> { throw new RuntimeException("Simulated"); }));
+        add(new H2("System Messages"));
+        add(new Paragraph("To test the customized system messages (provided by the "
+                + CustomSystemMessagesProvider.class.getSimpleName()
+                + " class), simply disable cookies temporarily in your browser, then press F5 to reload this tab."));
     }
 }
