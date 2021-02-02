@@ -39,6 +39,7 @@ public class ServiceInterfacesRoute extends VerticalLayout {
         add(ul);
         ul.add(new ListItem("Current locale (" + getLocale() + "): " + getTranslation("hello")));
         ul.add(new ListItem("English (default): " + getTranslation("hello", Locale.ENGLISH)));
+        ul.add(new ListItem("German: " + getTranslation("hello", Locale.GERMAN)));
         ul.add(new ListItem("French: " + getTranslation("hello", Locale.FRENCH)));
         ul.add(new ListItem("Japanese: " + getTranslation("hello", Locale.JAPANESE)));
         ul.add(new ListItem("Finnish: " + getTranslation("hello", new Locale("fi"))));
