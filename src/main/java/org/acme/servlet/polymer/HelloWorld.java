@@ -10,7 +10,7 @@ import com.vaadin.flow.templatemodel.TemplateModel;
 
 @Tag("hello-world")
 @NpmPackage(value = "@polymer/paper-input", version = "3.0.2")
-@JsModule("./src/hello-world.js")
+@JsModule("./src/polymer/hello-world.js")
 public class HelloWorld extends PolymerTemplate<HelloWorld.HelloWorldModel> {
     private static final String EMPTY_NAME_GREETING = "Please enter your name";
 

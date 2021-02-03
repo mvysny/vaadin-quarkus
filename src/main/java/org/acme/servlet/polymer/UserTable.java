@@ -14,7 +14,7 @@ import java.util.List;
  * Demoes passing of a list of beans via the TemplateModel; uses <code>dom-repeat</code>
  * on the client-side.
  */
-@JsModule("./src/user-list.js")
+@JsModule("./src/polymer/user-list.js")
 @Tag("user-list")
 public class UserTable extends PolymerTemplate<UserTable.UserModel> {
     public interface UserModel extends TemplateModel {

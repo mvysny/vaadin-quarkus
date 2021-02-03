@@ -7,8 +7,6 @@ import '@vaadin/vaadin-checkbox/vaadin-checkbox.js';
 class UserForm extends PolymerElement {
     static get template() {
         return html`
-            <style>
-            </style>
             <vaadin-form-layout id="form">
                 <vaadin-text-field id="email" label="Email (login)" colspan="2"></vaadin-text-field>
                 <vaadin-text-field id="first-name" label="First Name"></vaadin-text-field>
