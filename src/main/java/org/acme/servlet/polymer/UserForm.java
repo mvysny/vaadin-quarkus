@@ -21,7 +21,7 @@ import java.io.Serializable;
  * Example taken from https://vaadin.com/docs/v14/flow/polymer-templates/tutorial-template-and-binder.html
  */
 @Tag("user-form")
-@JsModule("./src/user-form.js")
+@JsModule("./src/polymer/user-form.js")
 public class UserForm extends PolymerTemplate<TemplateModel> {
 
     @Id("email")
