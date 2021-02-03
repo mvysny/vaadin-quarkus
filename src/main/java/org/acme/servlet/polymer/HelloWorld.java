@@ -1,6 +1,5 @@
 package org.acme.servlet.polymer;
 
-
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.dependency.NpmPackage;
@@ -18,7 +17,6 @@ public class HelloWorld extends PolymerTemplate<HelloWorld.HelloWorldModel> {
      * Creates the hello world template.
      */
     public HelloWorld() {
-        setId("template");
         getModel().setGreeting(EMPTY_NAME_GREETING);
     }
 
