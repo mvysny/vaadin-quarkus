@@ -15,7 +15,15 @@ import io.quarkus.test.Mock;
 @Mock
 public class MockInstantiator extends QuarkusInstantiator {
     @Override
-    public TemplateParser getTemplateParser() {
-        return new MockNpmTemplateParser();
+    public <T> T getOrCreate(Class<T> type) {
+        if (type == TemplateParser.TemplateParserFactory.class) {
+            return type.cast(new TemplateParser.TemplateParserFactory() {
+                @Override
+                public TemplateParser createParser() {
+                    return new MockNpmTemplateParser();
+                }
+            });
+        }
+        return super.getOrCreate(type);
     }
 }
