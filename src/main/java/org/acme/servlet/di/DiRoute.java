@@ -1,16 +1,16 @@
 package org.acme.servlet.di;
 
+import com.urosporo.quarkus.vaadin.cdi.annotation.UIScoped;
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.html.H2;
-import com.vaadin.flow.component.html.H3;
-import com.vaadin.flow.component.html.Hr;
-import com.vaadin.flow.component.html.Span;
+import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.acme.servlet.MainLayout;
 
+import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
 /**
@@ -19,6 +19,7 @@ import javax.inject.Inject;
  */
 @PageTitle("Dependency Injection Demo | Vaadin Quarkus Demo")
 @Route(value = "di", layout = MainLayout.class)
+@UIScoped
 public class DiRoute extends VerticalLayout {
     @Inject
     MyService myService;
@@ -29,9 +30,15 @@ public class DiRoute extends VerticalLayout {
     @Inject
     MyRouteScopedService myRouteScopedService;
 
+    @PostConstruct
+    public void init() {
+        add(new Paragraph("@PostConstruct-annotated method has been called correctly for this route"));
+    }
+
     public DiRoute() {
-        add(new Span("Demoes Quarkus dependency injection and various scopes"));
-        add(new Span("This route: " + this));
+        add(new H2("Demoes Quarkus dependency injection and various scopes"));
+        add(new Span("UI instance: " + UI.getCurrent()));
+        add(new Span("This route (should be UI-scoped): " + this));
         add(new Span("Warning: pressing F5 will re-create the UI, clearing both the UI-scoped and Route-scoped beans"));
         add(new Hr());
         add(new Span("Prototype-scoped; navigate away and back to get a new instance"));
