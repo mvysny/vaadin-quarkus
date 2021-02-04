@@ -3,6 +3,7 @@ package org.acme.servlet.serviceinterfaces;
 import com.helger.commons.annotation.VisibleForTesting;
 import com.urosporo.quarkus.vaadin.cdi.annotation.VaadinServiceEnabled;
 import com.urosporo.quarkus.vaadin.cdi.annotation.VaadinServiceScoped;
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.notification.NotificationVariant;
 import com.vaadin.flow.server.ErrorEvent;
@@ -32,8 +33,13 @@ public class CustomErrorHandler implements ErrorHandler {
     public void error(ErrorEvent event) {
         final int id = ERROR_ID.incrementAndGet();
         log.error("Application error #" + id, event.getThrowable());
-        Notification.show("An application error #" + id + " occurred, please see application logs for details",
-                5000, Notification.Position.TOP_CENTER)
-                .addThemeVariants(NotificationVariant.LUMO_ERROR, NotificationVariant.LUMO_PRIMARY);
+
+        // the handler can also be called from Servlet after the current instances have been cleared.
+        // Calling Notification.show() will fail if UI.getCurrent() is null. Check for this case.
+        if (UI.getCurrent() != null) {
+            Notification.show("An application error #" + id + " occurred, please see application logs for details",
+                    5000, Notification.Position.TOP_CENTER)
+                    .addThemeVariants(NotificationVariant.LUMO_ERROR, NotificationVariant.LUMO_PRIMARY);
+        }
     }
 }
