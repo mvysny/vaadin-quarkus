@@ -43,8 +43,10 @@ Support for the following features is demoed in this project:
 
 Known limitations:
 
-1. It's not possible to use a custom VaadinServlet currently: see [Vaadin #9755](https://github.com/vaadin/flow/issues/9755)
-   for more details.
+1. It's not possible to use a custom app-specific VaadinServlet currently:
+   see [Vaadin #9755](https://github.com/vaadin/flow/issues/9755)
+   for more details. However, the Vaadin-Quarkus Extension uses a custom
+   `QuarkusVaadinServlet`.
 
 ## Running the application in dev mode
 
