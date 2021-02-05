@@ -15,8 +15,8 @@ Support for the following features is demoed in this project:
 1. Route and RouterLayout auto-discovery: see the `AboutRoute`, `MainRoute` and `PolymerExampleRoute` example route classes
    and the `MainLayout` example layout class.
 2. The PolymerTemplate-based components and forms: the `HelloWorld` component
-   demoes a reusable PolymerTemplate-based component with a custom TemplateModel, while `UserForm` demoes
-   a PolymerTemplate-based form with fields exposed to the server-side via the `@Id` annotation.
+   demoes a reusable `PolymerTemplate`-based component with a custom `TemplateModel`, while `UserForm` demoes
+   a `PolymerTemplate`-based form with fields exposed to the server-side via the `@Id` annotation.
 3. Form validation via JSR-303, `BeanValidationBinder` and [hibernate-validator](https://hibernate.org/validator/).
    See `UserForm`.
 4. A custom `ServletContextListener` which is able to run certain functionality before the app
@@ -32,6 +32,14 @@ Support for the following features is demoed in this project:
 10. Bean events - demoes Vaadin-specific bean events being fired. See `EventsRoute`
    for more details.
 11. `@ClientCallable` - see `ClientCallableRoute`
+12. LitTemplates (only the `v19` branch): The `HelloWorld` component
+   demoes a LitElement-based component with events and properties, while
+    `UserForm` demoes a `LitTemplate`-based for with fields exposed to the server-side via the `@Id` annotation.
+13. Routes registered dynamically in the `ServiceInitEvent` observer bean.
+14. Vaadin-related event observers: `ServiceInitEvent`, `SessionInitEvent`, `UIInitEvent`,
+    navigation events, etc.
+15. Custom Vaadin service interfaces: custom `ErrorHandler`, custom `I18nProvider`,
+    custom `SystemMessagesProvider`.
 
 Known limitations:
 
