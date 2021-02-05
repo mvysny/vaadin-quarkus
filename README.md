@@ -4,6 +4,7 @@
 
 This project runs [Vaadin 14](https://vaadin.com/) on top of [Quarkus](https://quarkus.io/).
 The [JBoss Undertow Servlet container](https://undertow.io/) is used to run the Vaadin Servlet.
+Vaadin 19 port is also available, please see the `v19` branch.
 
 Uses [Vaadin Quarkus Extension](https://github.com/urosporo/vaadin-quarkus-extension-parent)
 to run smoothly on top of Quarkus.
