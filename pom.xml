@@ -21,14 +21,6 @@
   </properties>
   <repositories>
     <repository>
-      <id>jcenter</id>
-      <url>https://jcenter.bintray.com/</url>
-    </repository>
-    <repository>
-      <id>bintray-mbrem</id>
-      <url>https://dl.bintray.com/mbrem/urosporo</url>
-    </repository>
-    <repository>
       <id>vaadin-addons</id>
       <url>https://maven.vaadin.com/vaadin-addons</url>
     </repository>
@@ -56,7 +48,7 @@
     <dependency>
       <groupId>com.urosporo</groupId>
       <artifactId>vaadin-quarkus-extension</artifactId>
-      <version>1.0.0-RC1</version>
+      <version>1.0.0-rc2</version>
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
