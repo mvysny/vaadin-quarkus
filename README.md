@@ -4,6 +4,7 @@
 
 This project runs [Vaadin 14](https://vaadin.com/) on top of [Quarkus](https://quarkus.io/).
 The [JBoss Undertow Servlet container](https://undertow.io/) is used to run the Vaadin Servlet.
+Vaadin 19 port is also available, please see the `v19` branch.
 
 Uses [Vaadin Quarkus Extension](https://github.com/urosporo/vaadin-quarkus-extension-parent)
 to run smoothly on top of Quarkus.
@@ -15,8 +16,8 @@ Support for the following features is demoed in this project:
 1. Route and RouterLayout auto-discovery: see the `AboutRoute`, `MainRoute` and `PolymerExampleRoute` example route classes
    and the `MainLayout` example layout class.
 2. The PolymerTemplate-based components and forms: the `HelloWorld` component
-   demoes a reusable PolymerTemplate-based component with a custom TemplateModel, while `UserForm` demoes
-   a PolymerTemplate-based form with fields exposed to the server-side via the `@Id` annotation.
+   demoes a reusable `PolymerTemplate`-based component with a custom `TemplateModel`, while `UserForm` demoes
+   a `PolymerTemplate`-based form with fields exposed to the server-side via the `@Id` annotation.
 3. Form validation via JSR-303, `BeanValidationBinder` and [hibernate-validator](https://hibernate.org/validator/).
    See `UserForm`.
 4. A custom `ServletContextListener` which is able to run certain functionality before the app
@@ -32,11 +33,21 @@ Support for the following features is demoed in this project:
 10. Bean events - demoes Vaadin-specific bean events being fired. See `EventsRoute`
    for more details.
 11. `@ClientCallable` - see `ClientCallableRoute`
+12. LitTemplates (only the `v19` branch): The `HelloWorld` component
+   demoes a LitElement-based component with events and properties, while
+    `UserForm` demoes a `LitTemplate`-based for with fields exposed to the server-side via the `@Id` annotation.
+13. Routes registered dynamically in the `ServiceInitEvent` observer bean.
+14. Vaadin-related event observers: `ServiceInitEvent`, `SessionInitEvent`, `UIInitEvent`,
+    navigation events, etc.
+15. Custom Vaadin service interfaces: custom `ErrorHandler`, custom `I18nProvider`,
+    custom `SystemMessagesProvider`.
 
 Known limitations:
 
-1. It's not possible to use a custom VaadinServlet currently: see [Vaadin #9755](https://github.com/vaadin/flow/issues/9755)
-   for more details.
+1. It's not possible to use a custom app-specific VaadinServlet currently:
+   see [Vaadin #9755](https://github.com/vaadin/flow/issues/9755)
+   for more details. However, the Vaadin-Quarkus Extension uses a custom
+   `QuarkusVaadinServlet`.
 
 ## Running the application in dev mode
 

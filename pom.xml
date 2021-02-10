@@ -17,17 +17,9 @@
     <failOnMissingWebXml>false</failOnMissingWebXml>
     <vaadin.version>19.0.0.alpha5</vaadin.version>
     <junit.jupiter.version>5.7.0</junit.jupiter.version>
-    <kotlin.version>1.4.21</kotlin.version>
+    <kotlin.version>1.4.30</kotlin.version>
   </properties>
   <repositories>
-    <repository>
-      <id>jcenter</id>
-      <url>https://jcenter.bintray.com/</url>
-    </repository>
-    <repository>
-      <id>bintray-mbrem</id>
-      <url>https://dl.bintray.com/mbrem/urosporo</url>
-    </repository>
     <repository>
       <id>vaadin-addons</id>
       <url>https://maven.vaadin.com/vaadin-addons</url>
@@ -66,7 +58,7 @@
     <dependency>
       <groupId>com.urosporo</groupId>
       <artifactId>vaadin-quarkus-extension</artifactId>
-      <version>1.0.0-RC1</version>
+      <version>1.0.0-rc2</version>
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
@@ -130,7 +122,7 @@
     <dependency>
       <groupId>com.github.mvysny.kaributesting</groupId>
       <artifactId>karibu-testing-v10</artifactId>
-      <version>1.2.8</version>
+      <version>1.2.9</version>
       <scope>test</scope>
     </dependency>
     <dependency>
