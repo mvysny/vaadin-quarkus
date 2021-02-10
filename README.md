@@ -41,6 +41,7 @@ Support for the following features is demoed in this project:
     navigation events, etc.
 15. Custom Vaadin service interfaces: custom `ErrorHandler`, custom `I18nProvider`,
     custom `SystemMessagesProvider`.
+16. The `LitElement` and `LitTemplate` components and forms (only the `v19` and `v14_5` branches).
 
 Known limitations:
 
