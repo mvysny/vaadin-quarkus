@@ -17,7 +17,7 @@
     <failOnMissingWebXml>false</failOnMissingWebXml>
     <vaadin.version>14.4.7</vaadin.version>
     <junit.jupiter.version>5.7.0</junit.jupiter.version>
-    <kotlin.version>1.4.21</kotlin.version>
+    <kotlin.version>1.4.30</kotlin.version>
   </properties>
   <repositories>
     <repository>
@@ -112,7 +112,7 @@
     <dependency>
       <groupId>com.github.mvysny.kaributesting</groupId>
       <artifactId>karibu-testing-v10</artifactId>
-      <version>1.2.8</version>
+      <version>1.2.9</version>
       <scope>test</scope>
     </dependency>
     <dependency>
