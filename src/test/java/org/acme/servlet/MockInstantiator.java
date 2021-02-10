@@ -18,7 +18,7 @@ import io.quarkus.test.Mock;
 public class MockInstantiator extends QuarkusInstantiator {
     @Override
     public <T> T getOrCreate(Class<T> type) {
-        if (type == TemplateParser.TemplateParserFactory.class || type == LitTemplateParser.LitTemplateParserFactory.class) {
+        if (type == LitTemplateParser.LitTemplateParserFactory.class) {
             return new MockInstantiatorV18(this).getOrCreate(type);
         }
         return super.getOrCreate(type);

@@ -4,13 +4,16 @@ import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
+import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.html.*;
+import com.vaadin.flow.component.page.Push;
 import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.router.AfterNavigationEvent;
 import com.vaadin.flow.router.AfterNavigationObserver;
 import com.vaadin.flow.router.RouterLayout;
 import com.vaadin.flow.router.RouterLink;
+import com.vaadin.flow.server.PWA;
 import org.acme.servlet.about.AboutRoute;
 import org.acme.servlet.clientcallable.ClientCallableRoute;
 import org.acme.servlet.di.DiRoute;
@@ -30,6 +33,10 @@ import java.util.Map;
 /**
  * @author Martin Vysny <mavi@vaadin.com>
  */
+@PWA(name = "Project Base for Vaadin", shortName = "Project Base")
+@CssImport(value = "./styles/vaadin-text-field-styles.css", themeFor = "vaadin-text-field")
+@CssImport("./styles/shared-styles.css")
+@Push
 public class MainLayout extends AppLayout implements RouterLayout, AfterNavigationObserver {
 
     private final H1 currentViewName = new H1();
