@@ -113,3 +113,7 @@ you need to add the following lines to your `application.properties`:
 quarkus.index-dependency.multiselect-combo-box-flow.group-id=org.vaadin.gatanaso
 quarkus.index-dependency.multiselect-combo-box-flow.artifact-id=multiselect-combo-box-flow
 ```
+
+# License
+
+See [LICENSE](LICENSE) for more details.
