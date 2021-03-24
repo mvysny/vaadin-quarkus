@@ -34,7 +34,6 @@ public class EventFireTest extends AbstractAppTest {
 
     @Override @BeforeEach
     public void mockVaadin() {
-        System.out.println("HAHA KOKOS");
         // make sure to clear the events before we mock/init Vaadin, since that will fire events which we want to capture.
         eventRecorder.clear();
         super.mockVaadin();
