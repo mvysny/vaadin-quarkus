@@ -60,6 +60,10 @@ There are three branches of this example project:
    Vaadin 14.5.0 final is released, this branch will be merged into
    `main` and deleted.
 
+## Vaadin Quickstarter
+
+For a very simple Skeleton Starter app, please see [vaadin-quarkus-skeleton-starter](https://github.com/mvysny/vaadin-quarkus-skeleton-starter).
+
 ## Running the application in dev mode
 
 You can run your application in dev mode that enables live coding using:

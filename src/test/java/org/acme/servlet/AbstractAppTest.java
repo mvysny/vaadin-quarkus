@@ -19,6 +19,10 @@ public abstract class AbstractAppTest {
 
     @BeforeEach
     public void mockVaadin() {
+        // if this fails with
+        // java.lang.NullPointerException: Parameter specified as non-null is null: method com.github.mvysny.kaributesting.v10.MockVaadin.setup, parameter servlet
+        //
+        // make sure your test class is annotated with @QuarkusTest
         MockVaadin.setup(MockedUI::new, servlet);
     }
 
