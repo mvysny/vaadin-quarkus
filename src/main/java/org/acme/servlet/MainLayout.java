@@ -19,6 +19,7 @@ import org.acme.servlet.clientcallable.ClientCallableRoute;
 import org.acme.servlet.di.DiRoute;
 import org.acme.servlet.dynamicroutes.DynamicRoute;
 import org.acme.servlet.events.EventsRoute;
+import org.acme.servlet.lit.LitExampleRoute;
 import org.acme.servlet.main.MainRoute;
 import org.acme.servlet.polymer.PolymerExampleRoute;
 import org.acme.servlet.pushdemo.PushDemoRoute;
@@ -32,7 +33,7 @@ import java.util.Map;
 /**
  * @author Martin Vysny <mavi@vaadin.com>
  */
-@PWA(name = "Project Base for Vaadin", shortName = "Project Base", enableInstallPrompt = false)
+@PWA(name = "Project Base for Vaadin", shortName = "Project Base")
 @CssImport(value = "./styles/vaadin-text-field-styles.css", themeFor = "vaadin-text-field")
 @CssImport("./styles/shared-styles.css")
 @Push
@@ -51,6 +52,7 @@ public class MainLayout extends AppLayout implements RouterLayout, AfterNavigati
         routes.put(EventsRoute.class, "Bean Events Demo");
         routes.put(DynamicRoute.class, "Dynamic Route");
         routes.put(ServiceInterfacesRoute.class, "Vaadin Service Interfaces");
+        routes.put(LitExampleRoute.class, "Lit Template Demo");
         routes.put(AboutRoute.class, "About");
     }
 
