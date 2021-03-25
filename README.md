@@ -33,15 +33,15 @@ Support for the following features is demoed in this project:
 10. Bean events - demoes Vaadin-specific bean events being fired. See `EventsRoute`
    for more details.
 11. `@ClientCallable` - see `ClientCallableRoute`
-12. LitTemplates (only the `v19` branch): The `HelloWorld` component
+12. `LitTemplate`: The `HelloWorld` component
    demoes a LitElement-based component with events and properties, while
     `UserForm` demoes a `LitTemplate`-based for with fields exposed to the server-side via the `@Id` annotation.
+    Also a `LitElement`-based component is demoed.
 13. Routes registered dynamically in the `ServiceInitEvent` observer bean.
 14. Vaadin-related event observers: `ServiceInitEvent`, `SessionInitEvent`, `UIInitEvent`,
     navigation events, etc.
 15. Custom Vaadin service interfaces: custom `ErrorHandler`, custom `I18nProvider`,
     custom `SystemMessagesProvider`.
-16. The `LitElement` and `LitTemplate` components and forms (only the `v19` and `v14_5` branches).
 
 Known limitations:
 
