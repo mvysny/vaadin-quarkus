@@ -54,11 +54,8 @@ Known limitations:
 
 There are three branches of this example project:
 
-1. The `main` branch tracking the newest Vaadin 14 version
+1. The `main` branch tracking the newest Vaadin 14.5.1 version
 2. The `v19` branch tracking the Vaadin 19 version
-3. A temporary `v14_5` branch tracking the 14.5.0 alpha versions. Once
-   Vaadin 14.5.0 final is released, this branch will be merged into
-   `main` and deleted.
 
 ## Vaadin Quickstarter / Archetype
 
