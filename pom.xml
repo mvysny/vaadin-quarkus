@@ -171,9 +171,6 @@
             </goals>
           </execution>
         </executions>
-        <configuration>
-          <pnpmEnable>true</pnpmEnable>
-        </configuration>
       </plugin>
       <plugin>
         <groupId>io.quarkus</groupId>
