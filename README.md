@@ -9,6 +9,8 @@ Vaadin 19 port is also available, please see the `v19` branch.
 Uses [Vaadin Quarkus Extension](https://github.com/urosporo/vaadin-quarkus-extension-parent)
 to run smoothly on top of Quarkus.
 
+> Note: Starting with Vaadin 22, Quarkus is now an [official Vaadin offering](https://vaadin.com/docs/latest/flow/integrations/quarkus).
+
 ## Demoed Vaadin features
 
 Support for the following features is demoed in this project:
@@ -52,10 +54,7 @@ Known limitations:
 
 ## Demoed Vaadin Versions
 
-There are three branches of this example project:
-
-1. The `main` branch tracking the newest Vaadin 14.5.1 version
-2. The `v19` branch tracking the Vaadin 19 version
+This demo uses Vaadin 14. For Vaadin 22+, see the [official Vaadin offering](https://vaadin.com/docs/latest/flow/integrations/quarkus).
 
 ## Vaadin Quickstarter / Archetype
 
